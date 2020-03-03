@@ -223,6 +223,11 @@ def boost_deps():
         )
 
     if "boost" not in native.existing_rules():
+        # native.new_local_repository(
+        #     name = "boost",
+        #     path = "../../boost_1_71_0",
+        #     build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
+        # )
         http_archive(
             name = "boost",
             build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",

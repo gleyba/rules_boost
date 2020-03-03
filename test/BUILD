@@ -271,6 +271,15 @@ cc_test(
 )
 
 cc_test(
+    name = "outcome_test",
+    size = "small",
+    srcs = ["outcome_test.cc"],
+    deps = [
+        "@boost//:outcome",
+    ],
+)
+
+cc_test(
     name = "process_test",
     size = "small",
     srcs = ["process_test.cc"],

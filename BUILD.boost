@@ -1312,6 +1312,22 @@ boost_library(
 )
 
 boost_library(
+    name = "outcome",
+    hdrs = glob([
+        "libs/include/boost/**/*.hpp",
+    ]),
+    deps = [
+        ":config",
+        ":throw_exception",
+        ":utility",
+        ":system",
+        ":smart_ptr",
+        ":shared_ptr",
+    ],
+    copts = [ "-std=c++2a" ],
+)
+
+boost_library(
     name = "parameter",
     deps = [
         ":mp11",
